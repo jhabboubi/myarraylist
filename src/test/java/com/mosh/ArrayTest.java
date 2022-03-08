@@ -57,8 +57,13 @@ class ArrayTest {
     @Test
     void removeAt() {
         arr.insert(10);
-        arr.removeAt(0);
-        assertNull(arr.getContent(0));
+        arr.insert(20);
+        arr.insert(30);
+        arr.removeAt(1);
+        assertEquals(30,arr.getContent(1));
+        assertNull(arr.getContent(3));
+
+
     }
 
     @Test
